@@ -1,0 +1,27 @@
+@use "../abstracts/abstracts" as *;
+.technology {
+    background-color: $black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:24px;
+    padding: 40px 16px;
+    background-image: url("../../img/fondo-2.svg");
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    &__title {
+        font-family: $family;
+        font-size: 32px;
+        font-weight: 700;
+        color: $white;
+        text-align: center;
+    }
+    &__experience {
+        font-family: $family;
+        font-size: 16px;
+        font-weight: 500;
+        color: $white-light;
+        text-align: center;
+    }
+}
