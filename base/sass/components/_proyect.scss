@@ -8,6 +8,11 @@
   background-color: $black;
   color: $white;
   width: 100%;
+  @include breakpoint("tablet") {
+    padding: 24px 32px;
+    padding-right: 39px;
+  }
+  
   h2 {
     font-family: $family;
     font-size: 40px;
@@ -31,6 +36,19 @@
   gap: 40px;
   padding: 24px 16px;
   padding-bottom: 80px;
+  @include breakpoint("tablet") {
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    column-gap:24px;
+    row-gap:60px;
+    justify-items: start;
+    padding-left:32px;
+    padding-right:39px;
+    padding-bottom: 100px;
+    justify-content: center;
+    align-items: center;
+  }
   &__item {
     display: flex;
     flex-direction: column;
@@ -38,6 +56,7 @@
     align-items: start;
     gap: 16px;
     width: 100%;
+    
   }
   h2 {
     font-family: $family;

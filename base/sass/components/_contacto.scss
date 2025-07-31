@@ -5,6 +5,14 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+  background-image: url("../../img/fondo-1.svg");
+  background-repeat: no-repeat;
+  background-position: 0% 85%;
+  @include breakpoint("tablet") {
+    padding: 100px 16px;
+    padding:60px 132px 90px 132px;
+  }
+    
   &__introduccion {
     display: flex;
     flex-direction: column;
@@ -33,6 +41,24 @@
       border: 1px hidden $white;
       width: 100%;
       border-bottom: 1px solid $white-light;
+      padding: 16px 0;
+    }
+    a {
+      display:flex;
+      justify-content: end;
+      padding:20px 0px;
+      font-family: $family;
+      font-size: 16px;
+      font-weight: 700;
+      color: $white-light;
+      text-transform: uppercase;
+      text-underline-offset: 10px;
+      text-decoration-color: $green;
+      text-decoration-thickness: 2px;
+      text-align: center;
+      &:hover {
+        color: $green;
+      }
     }
   }
 }
