@@ -1,0 +1,38 @@
+@use "../abstracts/abstracts" as *;
+.contacto {
+  background-color: $black-light;
+  padding: 50px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  &__introduccion {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    h2 {
+      font-family: $family;
+      font-size: 40px;
+      font-weight: 700;
+      color: $white;
+      text-align: center;
+    }
+    p {
+      font-family: $family;
+      font-size: 16px;
+      font-weight: 500;
+      color: $white-light;
+      text-align: center;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    .item {
+      background-color: transparent;
+      border: 1px hidden $white;
+      width: 100%;
+      border-bottom: 1px solid $white-light;
+    }
+  }
+}
