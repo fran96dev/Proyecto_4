@@ -1,0 +1,56 @@
+@use "../abstracts/abstracts" as *;
+.hero {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:40px;
+    padding-bottom:80px;
+    border-bottom:1px solid $white;
+    &__image {
+        width: 100%;
+        background-image: url("../../img/fondo-1.svg"),url("../../img/fondo-oval.svg");
+        background-repeat: no-repeat, no-repeat;
+        background-position: 0% 10%, 100% 100%;
+        display: flex;
+        justify-content: center;
+        
+        img {
+            padding-top:50px;
+            width: 45%;
+            background-color: rgb($black-light,0.5);
+        }
+        
+    }
+    &__introduction {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:24px;
+        h1 {
+            font-size:40px;
+            font-weight: 700;
+            color:$white;
+            text-align: center;
+        }
+        p {
+            font-size:16px;
+            font-weight: 500;
+            color:$white-light;
+            text-align: center;
+        }
+        a {
+            font-size:16px;
+            font-weight: 500;
+            color:$white-light;
+            text-decoration-color: $green;
+            text-underline-offset: 10px;
+            text-decoration-thickness: 2px;
+            &:hover {
+                color:$green;
+                
+            }
+        }
+    }
+}

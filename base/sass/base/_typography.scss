@@ -1,0 +1,5 @@
+@use "../abstracts/abstracts" as *;
+
+h1, h2, p, a {
+    font-family:$family;
+}

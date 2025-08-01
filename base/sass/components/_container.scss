@@ -1,0 +1,10 @@
+@use "../abstracts/abstracts" as *;
+
+.container-1 {
+    background-color: $black;
+    padding:0px 16px;
+}
+.container-2 {
+    background-color: $black-light;
+    padding:0px 16px;
+}
