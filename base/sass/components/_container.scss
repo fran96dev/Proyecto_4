@@ -1,10 +1,37 @@
 @use "../abstracts/abstracts" as *;
 
 .container-1 {
-    background-color: $black;
-    padding:0px 16px;
+  background-color: $black;
+  padding: 0px 16px;
+  background-image: url("../../img/fondo-1.svg"),
+    url("../../img/fondo-oval.svg"), url("../../img/fondo-2.svg");
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: 0% 2%, 100% 6%, 100% 32%;
+  z-index: 1;
+  @include breakpoint("tablet") {
+    padding: 0px 32px;
+    background-position: 0% 3%, 100% 6%, 100% 43%;
+  }
+  @include breakpoint("desktop") {
+    padding: 0px 165px;
+    background-position: 0% 4%, 60% 14%, 100% 33%;
+    background-size: 50% 5%, 4% 4%, 30% 5%;
+  }
 }
 .container-2 {
-    background-color: $black-light;
-    padding:0px 16px;
+  background-color: $black-light;
+  padding: 60px 16px;
+  background-image: url("../../img/fondo-1.svg");
+  background-repeat: no-repeat;
+  background-position: 0% 65%;
+  z-index: 1;
+  @include breakpoint("tablet") {
+    padding: 0px 32px;
+    background-position: 0% 78%;
+  }
+  @include breakpoint("desktop") {
+    padding: 0px 165px;
+    background-position: 0% 60%;
+    background-size: 30% 20%;
+  }
 }

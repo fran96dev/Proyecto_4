@@ -1,20 +1,52 @@
 @use "../abstracts/abstracts" as *;
 header {
-    display:flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-top: 20px;
+  @include breakpoint("tablet") {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-top: 0px;
+  }
+  @include breakpoint("desktop") {
+    display: grid;
+    grid-template-columns: 65% 35%;
+  }
+  .logo {
+    @include breakpoint("tablet") {
+      display: block;
+      padding-top: 20px;
+      padding-left: 20px;
+    }
+  }
+  .social-media ul {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap:20px;
-    padding-top:20px;
-    .social-media ul{
-        display:flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        gap:25px;
-        background-color: rgb($black-light,0.5);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 25px;
+    background-color: rgb($black-light, 0.5);
+    @include breakpoint("tablet") {
+      justify-content: flex-end;
+      padding-right: 20px;
     }
+  }
+  .social-media {
+    @include breakpoint("tablet") {
+      display: block;
+      padding-top: 20px;
+      height: 100%;
+      background-color: rgb($black-light, 1);
+      transform: translateX(32px);
+    }
+    @include breakpoint("desktop") {
+      transform: translateX(0px);
+    }
+  }
 }

@@ -1,1 +1,73 @@
 @use "../abstracts/abstracts" as *;
+.proyect__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 80px;
+  padding-bottom: 40px;
+  h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: $white;
+  }
+}
+.proyect {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding-bottom: 80px;
+  @include breakpoint("tablet") {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 80px;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    @include breakpoint("tablet") {
+      align-items: start;
+    }
+  }
+  &__photo {
+    width: 100%;
+    object-fit: cover;
+  }
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    color: $white;
+  }
+  &__technology {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    font-size: 16px;
+    color: $white-light;
+  }
+  &__resources {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+  }
+}
+.btn {
+  font-size: 16px;
+  font-weight: 700;
+  color: $white-light;
+  text-underline-offset: 10px;
+  text-decoration-color: $green;
+  text-decoration-thickness: 2px;
+  &:hover {
+    color: $green;
+  }
+}
